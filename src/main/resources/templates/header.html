@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:fragment="navbar">
+        <ul class="nav">
+            <li><a href="/hello/current-date" th:classappend="${pageName == 'current-date' ? 'active' : ''}">Date</a></li>
+            <li><a href="/hello/cf" th:classappend="${pageName == 'cf' ? 'active' : ''}">Hello</a></li>
+            <li class="dropdown right"><a href="javascript:void(0)" class="dropbtn">Dropdown</a></li>
+                <div class="dropdown-content right-aligned">
+                    <a href="/logout">Αποσύνδεση</a> <!--/logout controller which is not created at the moment-->
+                </div>
+        </ul>
+    </div>
+</body>
+</html>
